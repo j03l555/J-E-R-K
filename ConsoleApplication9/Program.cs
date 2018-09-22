@@ -19,6 +19,7 @@ namespace ConsoleApplication9
              Version 0.0-initial
             */
 
+            //Start-up text
             Console.Title = "J E R K // Text Adventures by joelastley555";
             Console.WriteLine("==============================");
             Console.WriteLine("J E R K");
@@ -34,7 +35,26 @@ namespace ConsoleApplication9
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine(">>>>>>>>Press any key to play...<<<<<<<<");
+            //Wait for user to press a keyboard key
             Console.ReadKey();
+
+
+
+            //Clear console screen
+            Console.Clear();
+
+            //Create important variables
+            var heldItem = "null";
+
+            //DEBUG let the user select a debug scene instead of a normal scene
+            //if they want.
+            Console.WriteLine("Enter the name of a debug scene to enter it.");
+            Console.WriteLine("If you just want to enter the starting scene then (without quotes) type: \"story1\"");
+            var selectScene = Console.ReadLine();
+
+
+            //DEBUG scene
+            
         }
     }
 }
