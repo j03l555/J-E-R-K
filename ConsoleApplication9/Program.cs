@@ -44,17 +44,45 @@ namespace ConsoleApplication9
             Console.Clear();
 
             //Create important variables
-            var heldItem = "null";
+            var heldItem = "";
+            var userAction = "";
 
             //DEBUG let the user select a debug scene instead of a normal scene
             //if they want.
             Console.WriteLine("Enter the name of a debug scene to enter it.");
-            Console.WriteLine("If you just want to enter the starting scene then (without quotes) type: \"story1\"");
+            Console.WriteLine("If you just want to enter the starting scene then dont type in anything");
             var selectScene = Console.ReadLine();
+            if (selectScene == "debug_test1")
+            {
+                //DEBUG scene
+                Console.Clear();
+                heldItem = "";
+                userAction = "";
+                Console.WriteLine("You are in a room known as the Debug Room.");
+                Console.WriteLine("There is a table infront of you.");
+                Console.WriteLine("There is a mug on the table.");
+                Console.WriteLine("There is a notebook on the table.");
+                Console.WriteLine("There is a quill on the table.");
+                Console.WriteLine("There is a bottle of ink on the table.");
+                Console.WriteLine("What will you do?");
+                while (true)
+                {
+                    userAction = Console.ReadLine().ToLower();
 
 
-            //DEBUG scene
-            
+
+                }
+
+
+            }
+            else if (selectScene == "")
+            {
+                Console.Clear();
+                Console.WriteLine("Invalid scene name, ", selectScene);
+                Console.WriteLine("Press any key to exit program");
+                Console.ReadKey();
+                Environment.Exit(1);
+            }
         }
     }
 }
